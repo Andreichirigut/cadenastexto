@@ -66,6 +66,33 @@ public class ClaseString {
         System.out.println("s2 en mayus: " + mayusculas);
         System.out.println("String mayusculas en minusculas: " + mayusculas.toLowerCase());
         
+        //Quitar espacios delante y atrás
+        String espacios = " palabra palabra ";
+        System.out.println("Tamaño de espacios: " + espacios.length());
+        String sinEspacios = espacios.trim();
+        System.out.println("Tamaño de sinEspacios: " + sinEspacios.length());
+        
+        //Remplazo de caracteres
+        System.out.println("String original: " + s2);
+        String str2 = s2.replace('a', 'x');
+        System.out.println("String reemplazado: " + str2);
+        
+        //Contenido
+        String aBuscar = "dealbox";
+        System.out.println("¿Contiene " + s2 + " la subcadena " + aBuscar + "? " + s2.contains(aBuscar));
+        
+        //Probar métodos endsWith, startsWith, isEmpty
+        
+        //Obtener un array de char de la cadena
+        //declaracion de una variable array de tipo char 
+        char[] arrayChar;
+        arrayChar = s2.toCharArray();
+        //el atributo length existe en todos los array y me inidca su tamaño
+        //equivalente al metodo length() de los String
+        for(int i = 0; i<arrayChar.length; i++){
+            //para acceder a cada posición del array uso los corchetes
+            System.out.println("Posción i = " + i + " contenido = " + arrayChar[i]);
+        }
     }
 
 }
